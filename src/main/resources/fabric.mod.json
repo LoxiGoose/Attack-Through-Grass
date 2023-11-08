@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "attack_through_grass",
+  "version": "${version}",
+  "name": "Attack Through Grass",
+  "description": "Hit your enemies through grass!",
+  "authors": [
+    "LoxiGoose"
+  ],
+  "contact": {
+    "repo": "https://github.com/tardi/Loxi's Manhunt"
+  },
+  "license": "MIT",
+  "icon": "assets/attack_through_grass/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.goose.attack_through_grass.AttackThroughGrass"
+    ]
+  },
+  "mixins": [
+    "attack_through_grass.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
