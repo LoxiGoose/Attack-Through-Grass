@@ -43,13 +43,13 @@ public class AttackThroughGrass implements ModInitializer {
         Vec3d look = player.getRotationVec(partialTicks);
         Vec3d to = from.add(look.x * blockReachDistance, look.y * blockReachDistance, look.z * blockReachDistance);
 
-        HitResult hitresult = player.world.raycast(new RaycastContext(from, to, RaycastContext.ShapeType.COLLIDER, RaycastContext.FluidHandling.NONE, player));
+        HitResult hitresult = player.getWorld().raycast(new RaycastContext(from, to, RaycastContext.ShapeType.COLLIDER, RaycastContext.FluidHandling.NONE, player));
         if (hitresult.getType() != HitResult.Type.MISS) {
             to = hitresult.getPos();
         }
 
         return ProjectileUtil.getEntityCollision(
-                player.world,
+                player.getWorld(),
                 player,
                 from,
                 to,
