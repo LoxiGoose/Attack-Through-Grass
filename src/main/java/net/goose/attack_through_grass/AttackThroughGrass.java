@@ -56,7 +56,7 @@ public class AttackThroughGrass implements ModInitializer {
                 new Box(from, to),
                 EntityPredicates.EXCEPT_CREATIVE_OR_SPECTATOR
                         .and(e -> e != null
-                                && e.collides()
+                                && e.canHit()
                                 && e instanceof LivingEntity
                                 && !getAllRidingEntities(player).contains(e)
                         )
