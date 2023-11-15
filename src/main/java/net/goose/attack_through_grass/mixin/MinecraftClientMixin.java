@@ -57,7 +57,7 @@ public class MinecraftClientMixin {
                 new Box(from, to),
                 EntityPredicates.EXCEPT_CREATIVE_OR_SPECTATOR
                         .and(e -> e != null
-                                && e.isCollidable()
+                                && e.isAttackable()
                                 && e instanceof LivingEntity
                                 && !getAllRidingEntities(player).contains(e)
                         )
