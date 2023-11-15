@@ -14,8 +14,8 @@
   "icon": "assets/attack_through_grass/icon.png",
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "net.goose.attack_through_grass.AttackThroughGrass"
+    "client": [
+      "net.goose.attack_through_grass.AttackThroughGrassClient"
     ]
   },
   "mixins": [
