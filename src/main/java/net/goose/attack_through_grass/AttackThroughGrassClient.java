@@ -68,7 +68,6 @@ public class AttackThroughGrassClient implements ClientModInitializer {
                 EntityPredicates.EXCEPT_CREATIVE_OR_SPECTATOR
                         .and(e -> e != null
                                 && e.canHit()
-                                && e instanceof LivingEntity
                                 && !getAllRidingEntities(player).contains(e)
                         )
         );
